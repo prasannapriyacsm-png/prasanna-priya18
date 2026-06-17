@@ -1,24 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My First Web Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Course Page</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 80px;
+        background-color: #ffffff;
+    }
+
+    h1 {
+        font-size: 90px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+
+    .faculty {
+        font-size: 48px;
+        color: #555;
+        margin-bottom: 80px;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 900px;
+    }
+
+    th, td {
+        border: 3px solid #333;
+        padding: 35px;
+        font-size: 38px;
+    }
+
+    th {
+        font-size: 48px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .topic {
+        text-align: left;
+        padding-left: 70px;
+    }
+
+    .quiz {
+        text-align: center;
+    }
+
+    a {
+        color: #2563eb;
+    }
+</style>
 </head>
+
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a sample HTML page.</p>
 
-    <a href="https://www.example.com">Visit Example</a>
+<h1>Course Page</h1>
 
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-    </ul>
+<div class="faculty">
+    Faculty: Rohini Kumar Barla
+</div>
 
-    <button onclick="alert('Hello, World!')">
-        Click Me
-    </button>
+<table>
+    <tr>
+        <th class="topic">Topic</th>
+        <th>Quiz</th>
+    </tr>
 
-    <a href="MLF.html"> ML Form</a>
+    <tr>
+        <td class="topic">
+            <a href="#">Introduction to HTML</a>
+        </td>
+        <td class="quiz">
+            <a href="#">Quiz</a>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="topic">
+            <a href="#">CSS Basics</a>
+        </td>
+        <td class="quiz">
+            <a href="#">Quiz</a>
+        </td>
+    </tr>
+</table>
+
 </body>
 </html>
