@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Machine Learning Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #result {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Machine Learning Quiz</h1>
+
+    <form id="quizForm">
+
+        <div class="question">
+            <p>1. What does ML stand for?</p>
+            <input type="radio" name="q1" value="a"> Machine Learning<br>
+            <input type="radio" name="q1" value="b"> Machine Logic<br>
+            <input type="radio" name="q1" value="c"> Modern Learning<br>
+        </div>
+
+        <div class="question">
+            <p>2. Which of the following is a supervised learning algorithm?</p>
+            <input type="radio" name="q2" value="a"> K-Means<br>
+            <input type="radio" name="q2" value="b"> Linear Regression<br>
+            <input type="radio" name="q2" value="c"> PCA<br>
+        </div>
+
+        <div class="question">
+            <p>3. Which algorithm is used for classification?</p>
+            <input type="radio" name="q3" value="a"> Logistic Regression<br>
+            <input type="radio" name="q3" value="b"> K-Means<br>
+            <input type="radio" name="q3" value="c"> Apriori<br>
+        </div>
+
+        <div class="question">
+            <p>4. What is overfitting?</p>
+            <input type="radio" name="q4" value="a"> Model performs well on training data only<br>
+            <input type="radio" name="q4" value="b"> Model performs poorly everywhere<br>
+            <input type="radio" name="q4" value="c"> Model trains faster<br>
+        </div>
+
+        <div class="question">
+            <p>5. Which library is commonly used for ML in Python?</p>
+            <input type="radio" name="q5" value="a"> NumPy<br>
+            <input type="radio" name="q5" value="b"> Scikit-learn<br>
+            <input type="radio" name="q5" value="c"> Tkinter<br>
+        </div>
+
+        <div class="question">
+            <p>6. What is the purpose of a training dataset?</p>
+            <input type="radio" name="q6" value="a"> To evaluate the model<br>
+            <input type="radio" name="q6" value="b"> To train the model<br>
+            <input type="radio" name="q6" value="c"> To deploy the model<br>
+        </div>
+
+        <div class="question">
+            <p>7. Which technique reduces overfitting?</p>
+            <input type="radio" name="q7" value="a"> Regularization<br>
+            <input type="radio" name="q7" value="b"> Increasing noise<br>
+            <input type="radio" name="q7" value="c"> Removing data<br>
+        </div>
+
+        <div class="question">
+            <p>8. K-Means is an example of:</p>
+            <input type="radio" name="q8" value="a"> Supervised Learning<br>
+            <input type="radio" name="q8" value="b"> Reinforcement Learning<br>
+            <input type="radio" name="q8" value="c"> Unsupervised Learning<br>
+        </div>
+
+        <div class="question">
+            <p>9. Which metric is commonly used for classification?</p>
+            <input type="radio" name="q9" value="a"> Accuracy<br>
+            <input type="radio" name="q9" value="b"> RMSE<br>
+            <input type="radio" name="q9" value="c"> MSE<br>
+        </div>
+
+        <div class="question">
+            <p>10. Deep Learning is a subset of:</p>
+            <input type="radio" name="q10" value="a"> Data Mining<br>
+            <input type="radio" name="q10" value="b"> Machine Learning<br>
+            <input type="radio" name="q10" value="c"> Databases<br>
+        </div>
+
+        <button type="button" onclick="calculateScore()">Submit Quiz</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function calculateScore() {
+    let score = 0;
+
+    const answers = {
+        q1: "a",
+        q2: "b",
+        q3: "a",
+        q4: "a",
+        q5: "b",
+        q6: "b",
+        q7: "a",
+        q8: "c",
+        q9: "a",
+        q10: "b"
+    };
+
+    for (let q in answers) {
+        let selected = document.querySelector(`input[name="${q}"]:checked`);
+        if (selected && selected.value === answers[q]) {
+            score++;
+        }
+    }
+
+    document.getElementById("result").innerHTML =
+        "Your Score: " + score + " / 10";
+}
+</script>
+
+</body>
+</html>
